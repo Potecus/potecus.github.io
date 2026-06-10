@@ -1,15 +1,34 @@
+const contenedor = document.getElementById("productos");
 const buscador = document.getElementById("buscador");
+
+let productos = [];
+
+fetch("https://backend-tienda-41l7.onrender.com/productos")
+    .then(res => res.json())
+    .then(data => {
+        productos = data;
+        mostrarProductos(productos);
+    });
+
+function mostrarProductos(lista) {
+    contenedor.innerHTML = "";
+
+    lista.forEach(producto => {
+        contenedor.innerHTML += `
+            <div class="producto">
+                <h2>${producto.nombre}</h2>
+                <p>$${producto.precio}</p>
+            </div>
+        `;
+    });
+}
 
 buscador.addEventListener("input", () => {
     const texto = buscador.value.toLowerCase();
 
-    document.querySelectorAll(".producto").forEach(producto => {
-        const nombre = producto.querySelector("h2").textContent.toLowerCase();
+    const filtrados = productos.filter(producto =>
+        producto.nombre.toLowerCase().includes(texto)
+    );
 
-        if (nombre.includes(texto)) {
-            producto.style.display = "block";
-        } else {
-            producto.style.display = "none";
-        }
-    });
+    mostrarProductos(filtrados);
 });
