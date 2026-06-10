@@ -15,12 +15,15 @@ function mostrarProductos(lista) {
     contenedor.innerHTML = "";
 
     lista.forEach(producto => {
-        contenedor.innerHTML += `
-            <div class="producto">
-                <h2>${producto.nombre}</h2>
-                <p>$${producto.precio}</p>
-            </div>
+        const div = document.createElement("div");
+        div.className = "producto";
+
+        div.innerHTML = `
+            <h2>${producto.nombre}</h2>
+            <p>$${producto.precio}</p>
         `;
+
+        contenedor.appendChild(div);
     });
 }
 
