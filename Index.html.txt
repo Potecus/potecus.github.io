@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mi Tienda</h1>
+
+        <input
+            type="text"
+            id="buscador"
+            placeholder="Buscar producto..."
+        >
+    </header>
+
+    <main id="productos">
+
+        <div class="producto">
+            <h2>iPhone 15</h2>
+            <p>$1200</p>
+        </div>
+
+        <div class="producto">
+            <h2>Samsung S24</h2>
+            <p>$1000</p>
+        </div>
+
+        <div class="producto">
+            <h2>Notebook Lenovo</h2>
+            <p>$800</p>
+        </div>
+
+        <div class="producto">
+            <h2>Auriculares Sony</h2>
+            <p>$150</p>
+        </div>
+
+        <div class="producto">
+            <h2>Mouse Logitech</h2>
+            <p>$50</p>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
