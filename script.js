@@ -4,13 +4,9 @@ const buscador = document.getElementById("buscador");
 let productos = [];
 
 fetch("https://backend-tienda-41l7.onrender.com/productos")
-    .then(data => {
-    console.log(data);
-    productos = data;
-    mostrarProductos(productos);
-});
     .then(res => res.json())
     .then(data => {
+        console.log(data);
         productos = data;
         mostrarProductos(productos);
     });
