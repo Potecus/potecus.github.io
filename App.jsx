@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Styles.css";
 const telas = [
   {
-    nombre: "Gabardina",
+    nombre: "TESTGabardina",
     descripcion: "Resistente y versátil para prendas y uniformes.",
     imagen:
       "https://images.unsplash.com/photo-1598032895397-b9472444bf93?auto=format&fit=crop&w=900&q=80",
